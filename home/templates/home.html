@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block start %}
+<div class="container ">
+    <h1>The record of stdent</h1>
+    <table class="table table-striped border- border-secondary border-opacity-50 rounded-3  shadow-lg  ">
+        <thead class="bg-primary bg-opacity-10  border-2  ">
+            <tr>
+                <th scope="col" class="bg-primary bg-opacity-10 ">S.no</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Name</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Father name</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Department</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Semister</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Roll no</th>
+                <th scope="col" class="bg-primary bg-opacity-10 ">Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for students in student %}
+            <tr class="text-center ">
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{students.name}}</td>
+                <td>{{students.father_name}}</td>
+                <td>{{students.department}}</td>
+                <td>{{students.semister}}</td>
+                <td>{{students.roll_no}}</td>
+                <td><img src="/media/{{students.image}}" style="height: 100px;width: 100px;border-radius: 10px;"></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock%}

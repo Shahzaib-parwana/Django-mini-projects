@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block start %}
+<div class="container mt-5 ">
+    <form class="col-md-7 mx-auto card p-3 shadow-lg  " method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3>Add student detail</h3>
+        <div class="mb-4">
+          <label for="exampleInputEmail1" class="form-label" style="font-weight: 500;">Name:</label>
+          <input name="name" type="text" required class="form-control" placeholder="Enter your name">
+        </div>
+
+        <div class="mb-4">
+          <label  class="form-label" style="font-weight: 500;">Father name:</label>
+          <input name="father_name" type="text" required class="form-control"  placeholder="Enter your father name">
+        </div>
+
+        <div class="mb-4">
+          <label  class="form-label" style="font-weight: 500;">Department:</label>
+          <input name="department" type="text" required class="form-control" placeholder="Enter your department">
+        </div>
+
+        <div class="mb-4">
+          <label  class="form-label" style="font-weight: 500;">Semister:</label>
+          <input name="semister" type="text" required class="form-control" placeholder="Enter your Semister">
+        </div>
+
+        <div class="mb-4">
+          <label  class="form-label" style="font-weight: 500;">Roll no:</label>
+          <input name="roll_no" type="text" required class="form-control" placeholder="Enter your Roll no">
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label" style="font-weight: 500;">Uplode Image:</label>
+          <input name="image" required style="background-color: rgba(167, 164, 164, 0.774);" type="file" class="form-control ">
+        </div>
+        <button type="submit" class="btn btn-primary  " style="font-weight: 500;">Submit</button>
+      </form>
+</div>
+
+
+{% endblock%}
